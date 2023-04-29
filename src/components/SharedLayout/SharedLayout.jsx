@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { Container, Header, Wrapper } from './SharedLayout.styled';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn, selectUser } from 'redux/auth/selectors';
+import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { UserMenu } from 'components/Auth/UserMenu';
 import { AuthNav } from 'components/Auth/AuthNav';
 
