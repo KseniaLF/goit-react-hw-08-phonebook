@@ -8,14 +8,14 @@ import { selectContacts } from 'redux/selectors';
 
 const initialValues = {
   name: '',
-  phone: '+',
+  number: '+',
 };
 
 const phoneRegExp =
   /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
 let Schema = object({
   name: string().max(20).required('Enter a name'),
-  phone: string()
+  number: string()
     .matches(phoneRegExp, 'Phone number is not valid')
     .required('Enter a number'),
 });
@@ -52,15 +52,15 @@ export const Form = () => {
           <Errorform name="name" component="div" />
         </label>
 
-        <label htmlFor="phone">
+        <label htmlFor="number">
           <p>Phone</p>
           <Input
-            id="phone"
-            name="phone"
+            id="number"
+            name="number"
             type="tel"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           />
-          <Errorform name="phone" component="div" />
+          <Errorform name="number" component="div" />
         </label>
 
         <button type="submit">Add contact</button>
