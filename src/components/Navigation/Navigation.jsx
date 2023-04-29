@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom';
 
 import { NavLink } from 'react-router-dom';
-import { Container, Header, Wrapper } from './SharedLayout.styled';
+import { Container, Header, Wrapper } from './Navigation.styled';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { UserMenu } from 'components/Auth/UserMenu';
 import { AuthNav } from 'components/Auth/AuthNav';
 
-export const SharedLayout = () => {
+export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (

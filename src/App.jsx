@@ -2,16 +2,16 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 
-import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 import HomePage from 'pages/HomePage';
 import ContactsPage from 'pages/ContactsPage';
 import LoginPage from 'pages/LoginPage';
 import RegisterPage from 'pages/RegisterPage';
 
 import { refreshUser } from 'redux/auth/operations';
-import { RestrictedRoute } from './Auth/RestrictedRoute';
-import { PrivateRoute } from './Auth/PrivateRoute';
+import { RestrictedRoute } from './components/Auth/RestrictedRoute';
+import { PrivateRoute } from './components/Auth/PrivateRoute';
 import { useAuth } from 'hooks';
+import { Navigation } from './components/Navigation/Navigation';
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ export const App = () => {
     <b>Refreshing user...</b>
   ) : (
     <Routes>
-      <Route path="/" element={<SharedLayout />}>
+      <Route path="/" element={<Navigation />}>
         <Route index element={<HomePage />} />
 
         <Route

@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
 import { Form } from 'components/Form/Form';
 import { ContactList } from 'components/ContactList/ContactList';
-import { AppContainer } from 'components/App/App.styled';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -17,7 +16,7 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <AppContainer>
+    <div>
       <h1>Phonebook</h1>
 
       <Form />
@@ -28,7 +27,7 @@ const ContactsPage = () => {
 
       <ContactList />
       {isLoading && !error && <b>Request in progress...</b>}
-    </AppContainer>
+    </div>
   );
 };
 export default ContactsPage;

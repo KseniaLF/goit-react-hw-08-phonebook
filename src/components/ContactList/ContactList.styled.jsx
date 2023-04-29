@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactContainer = styled.div`
+  margin-top: 15px;
   li {
     display: flex;
     justify-content: space-between;
@@ -21,9 +22,10 @@ export const ContactContainer = styled.div`
 
 export const DeteleBtn = styled.button`
   display: flex;
-  font-size: 18px;
+  align-items: center;
+
+  font-size: 25px;
   border-radius: 5px;
-  /* padding: 0 10px; */
   background-color: #8387d186;
   border: 1px solid black;
   cursor: pointer;

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import { Layout } from 'components/Constants/Layout.styled';
-import { GlobalStyle } from 'components/Constants/GlobalStyle';
+import { Layout } from 'constants/Layout.styled';
+import { GlobalStyle } from 'constants/GlobalStyle';
 
-import { App } from 'components/App';
+import { App } from 'App';
 
 import { Provider } from 'react-redux';
 import { persistor, store } from 'redux/store';
