@@ -23,7 +23,7 @@ export const SharedLayout = () => {
               Home
             </NavLink>
 
-            <NavLink to="/contacts">Contacts</NavLink>
+            {isLoggedIn && <NavLink to="/contacts">Contacts</NavLink>}
           </nav>
         </div>
 
