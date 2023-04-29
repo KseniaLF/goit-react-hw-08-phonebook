@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
 export const AppContainer = styled.div`
-  background-color: #fff;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 30px;
-  width: 500px;
-  /* max-width: 500px; */
+  text-align: center;
+  /* margin: 0 auto; */
+  max-width: 500px;
 
   h1 {
     margin-bottom: 15px;
